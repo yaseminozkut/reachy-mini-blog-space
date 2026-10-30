@@ -8,7 +8,7 @@ sdk_version: 5.0.0
 app_file: app.py
 pinned: false
 license: apache-2.0
-short_description: Blog posts about Reachy Mini from Hugging Face and Pollen Robotics
+short_description: Blog posts about Reachy Mini, aggregated hourly
 tags:
   - reachy-mini
 ---
