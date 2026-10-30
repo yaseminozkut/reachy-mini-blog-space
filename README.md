@@ -9,6 +9,8 @@ app_file: app.py
 pinned: false
 license: apache-2.0
 short_description: Blog posts about Reachy Mini from Hugging Face and Pollen Robotics
+tags:
+  - reachy-mini
 ---
 
 # Reachy Mini Blog
