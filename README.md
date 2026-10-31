@@ -8,7 +8,7 @@ pinned: false
 license: apache-2.0
 short_description: Blog posts about Reachy Mini, aggregated weekly
 tags:
-  - reachy-mini
+  - reachy_mini
 ---
 
 # Reachy Mini Blogs
