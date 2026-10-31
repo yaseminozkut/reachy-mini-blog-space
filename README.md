@@ -19,7 +19,7 @@ A static feed of blog posts about **Reachy Mini**, aggregated from:
 - Hugging Face community articles
 - The Pollen Robotics site
 
-A GitHub Action runs `build.py` on a schedule, regenerates `index.html`, and pushes to both GitHub and this HF Space — but **only when the content actually changes**. The commit history doubles as a changelog of new Reachy Mini posts.
+A GitHub Action runs weekly. If the scraped content has changed, it pushes a fresh `index.html` to this Space (and GitHub). If nothing changed, the Space's last-updated timestamp stays the same.
 
 ## Local run
 

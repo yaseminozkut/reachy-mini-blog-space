@@ -188,6 +188,7 @@ HEADER_HTML = """
 <div class="rm-header">
   <h1>Reachy Mini Blogs</h1>
   <p>Blog posts about <strong>Reachy Mini</strong>, from the Hugging Face blog, the HF community, and Pollen Robotics.</p>
+  <p>Checked weekly for new posts; the timestamp below only updates when new content is found.</p>
 </div>
 """
 

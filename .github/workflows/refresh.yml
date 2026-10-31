@@ -2,8 +2,7 @@ name: Refresh index.html
 
 on:
   schedule:
-    # Daily at 06:00 UTC (new Reachy posts don't drop more than once a day in practice)
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * 1"
   workflow_dispatch:
 
 permissions:
