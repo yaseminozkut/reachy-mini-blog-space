@@ -280,7 +280,7 @@ def main() -> None:
     _load_snapshot()
     threading.Thread(target=_initial_scrape, daemon=True).start()
     threading.Thread(target=_background_refresher, daemon=True).start()
-    build_app().queue().launch(server_name="0.0.0.0")
+    build_app().queue().launch(server_name="0.0.0.0", ssr_mode=False)
 
 
 if __name__ == "__main__":
