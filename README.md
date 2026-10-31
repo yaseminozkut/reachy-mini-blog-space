@@ -1,8 +1,8 @@
 ---
 title: Reachy Mini Blogs
 emoji: 💻
-colorFrom: gray
-colorTo: pink
+colorFrom: blue
+colorTo: green
 sdk: static
 pinned: false
 license: apache-2.0
