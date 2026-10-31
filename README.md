@@ -1,32 +1,30 @@
 ---
-title: Reachy Mini Blog
-emoji: 🤖
-colorFrom: pink
-colorTo: indigo
-sdk: gradio
-sdk_version: 5.44.0
-app_file: app.py
+title: Reachy Mini Blogs
+emoji: 💻
+colorFrom: gray
+colorTo: pink
+sdk: static
 pinned: false
 license: apache-2.0
-short_description: Blog posts about Reachy Mini, aggregated hourly
+short_description: Blog posts about Reachy Mini, aggregated weekly
 tags:
   - reachy-mini
 ---
 
-# Reachy Mini Blog
+# Reachy Mini Blogs
 
-A curated feed of blog posts about **Reachy Mini**, gathered from:
+A static feed of blog posts about **Reachy Mini**, aggregated from:
 
-- The Hugging Face main blog (`huggingface.co/blog`)
-- Hugging Face community articles (`huggingface.co/blog/<org>/<slug>`)
-- The Pollen Robotics site (`pollen-robotics.com/reachy-mini/blog/`)
+- The Hugging Face main blog
+- Hugging Face community articles
+- The Pollen Robotics site
 
-Posts are scraped at Space boot and refreshed in the background every hour.
-Visitors always see the cached list — no waiting on page load.
+A GitHub Action runs `build.py` on a schedule, regenerates `index.html`, and pushes to both GitHub and this HF Space — but **only when the content actually changes**. The commit history doubles as a changelog of new Reachy Mini posts.
 
 ## Local run
 
 ```bash
 pip install -r requirements.txt
-python app.py
+python build.py
+open index.html
 ```

@@ -1,0 +1,51 @@
+name: Refresh index.html
+
+on:
+  schedule:
+    # Daily at 06:00 UTC (new Reachy posts don't drop more than once a day in practice)
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build index.html
+        run: python build.py
+
+      - name: Commit and push if changed
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet index.html; then
+            echo "No change in index.html; skipping commit."
+            exit 0
+          fi
+
+          git add index.html
+          git commit -m "chore: auto-refresh $(date -u +%Y-%m-%d)"
+
+          # Push to GitHub (uses GITHUB_TOKEN automatically)
+          git push origin HEAD:main
+
+          # Push to HF Space (requires HF_TOKEN secret)
+          git push "https://yozkut:${HF_TOKEN}@huggingface.co/spaces/yozkut/reachy-mini-blogs" HEAD:main

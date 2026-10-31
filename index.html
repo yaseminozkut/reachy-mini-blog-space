@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reachy Mini Blogs</title>
+<meta name="description" content="Blog posts about Reachy Mini, aggregated from Hugging Face and Pollen Robotics">
+<style>
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f8fafc;
+  --fg: #1f2937;
+  --fg-muted: #6b7280;
+  --border: #e5e7eb;
+  --pink: #ec4899;
+  --indigo: #6366f1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0f19;
+    --bg-soft: #1f2937;
+    --fg: #f3f4f6;
+    --fg-muted: #9ca3af;
+    --border: #374151;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.5;
+}
+.rm-wrap { max-width: 1120px; margin: 0 auto; padding: 32px 20px 48px; }
+.rm-header { padding: 8px 4px 20px; }
+.rm-header h1 {
+  font-size: 36px; font-weight: 800; margin: 0 0 8px;
+  background: linear-gradient(90deg, var(--pink), var(--indigo));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  letter-spacing: -0.02em;
+}
+.rm-header p { color: var(--fg-muted); margin: 0; font-size: 15px; }
+.rm-toolbar {
+  padding: 4px; margin-bottom: 16px;
+  color: var(--fg-muted); font-size: 13px;
+}
+.rm-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 18px;
+}
+.rm-empty {
+  padding: 48px 16px; text-align: center;
+  color: var(--fg-muted); font-size: 15px;
+}
+.rm-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  display: flex; flex-direction: column;
+}
+.rm-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -14px rgba(0,0,0,0.25);
+  border-color: var(--pink);
+}
+.rm-card-link { color: inherit; text-decoration: none; display: block; }
+.rm-thumb {
+  width: 100%; aspect-ratio: 16/9;
+  background-size: cover; background-position: center;
+  background-color: var(--border);
+}
+.rm-thumb--empty {
+  background: linear-gradient(135deg, #fdf2f8, #eef2ff);
+}
+.rm-card-body { padding: 14px 16px 16px; }
+.rm-card-meta {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 8px; font-size: 12px;
+}
+.rm-badge {
+  padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600;
+  background: #fce7f3; color: #9d174d;
+}
+.rm-badge--hf-community { background: #ede9fe; color: #5b21b6; }
+.rm-badge--pollen { background: #e0f2fe; color: #075985; }
+.rm-date { color: var(--fg-muted); }
+.rm-title {
+  margin: 0 0 6px;
+  font-size: 16px; font-weight: 700; line-height: 1.35;
+  color: var(--fg);
+}
+.rm-authors {
+  margin: 0 0 10px;
+  font-size: 12.5px; color: var(--fg-muted);
+}
+.rm-desc {
+  margin: 0;
+  font-size: 13.5px; line-height: 1.5;
+  color: var(--fg-muted);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rm-mirrors {
+  padding: 10px 16px 14px;
+  margin-top: auto;
+  border-top: 1px dashed var(--border);
+  font-size: 12px;
+  color: var(--fg-muted);
+}
+.rm-mirrors a {
+  color: var(--fg-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 120ms ease, border-color 120ms ease;
+}
+.rm-mirrors a:hover { color: var(--pink); border-bottom-color: var(--pink); }
+.rm-footer {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border);
+  color: var(--fg-muted); font-size: 12.5px; text-align: center;
+}
+.rm-footer a { color: var(--fg-muted); }
+</style>
+</head>
+<body>
+<div class="rm-wrap">
+
+<div class="rm-header">
+  <h1>Reachy Mini Blogs</h1>
+  <p>Blog posts about <strong>Reachy Mini</strong>, from the Hugging Face blog, the HF community, and Pollen Robotics.</p>
+</div>
+
+<div class="rm-toolbar">16 posts · last updated Oct 31, 2026 03:36 UTC</div>
+<section class="rm-grid">
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/animate-in-blender/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/animate-in-blender.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Oct 29, 2026</span>
+      </div>
+      <h3 class="rm-title">Animate Reachy Mini in Blender</h3>
+      <p class="rm-authors">Simon Le Goff, Thibaud Frere</p>
+      <p class="rm-desc">Pose Reachy Mini in Blender and the robot follows live: play timelines with sound, publish moves to the Hub, remix community moves and loop them.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/software-stack/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/software-stack.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Sep 30, 2026</span>
+      </div>
+      <h3 class="rm-title">A galaxy in your palm</h3>
+      <p class="rm-authors">Clément Dussieux, Thibaud Frere</p>
+      <p class="rm-desc">A year of Reachy Mini software in three moves: talk to it out of the box, add abilities from the app store, build your own. No robotics background needed.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/webrtc/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/webrtc.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Sep 30, 2026</span>
+      </div>
+      <h3 class="rm-title">One Protocol to Move Them All</h3>
+      <p class="rm-authors">Clément Dussieux, Fabien Danieau, Thibaud Frere</p>
+      <p class="rm-desc">Inside the Reachy Mini stack: one WebRTC connection for audio, video and motor control, local or remote, and the SDK layers that make apps easy to share.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/from-python-to-js/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/from-python-to-js.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Sep 30, 2026</span>
+      </div>
+      <h3 class="rm-title">From Python to JavaScript: the next chapter for Reachy Mini apps</h3>
+      <p class="rm-authors">Thibaud Frere, Clément Dussieux</p>
+      <p class="rm-desc">Why new Reachy Mini apps are built with the JS SDK: nothing to install, always up to date, safe by default. And what it means for your Python apps.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/open-realtime-voice/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/open-realtime-voice.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Jul 15, 2026</span>
+      </div>
+      <h3 class="rm-title">Reachy Mini talks with an open realtime voice</h3>
+      <p class="rm-authors">Andres Marafioti, Amir Mahla, Thibaud Frere</p>
+      <p class="rm-desc">Reachy Mini&#x27;s conversation runs on our own open, OpenAI-Realtime-compatible voice engine. The short version, with a pointer to the full deep dive.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/build-small-hackathon/run-reachy-run-blog" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/build-small-hackathon/run-reachy-run-blog.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-community">HF Community Blog</span>
+        <span class="rm-date">Jun 15, 2026</span>
+      </div>
+      <h3 class="rm-title">How I Built Run Reachy Run</h3>
+      <p class="rm-authors">Munish Kumar</p>
+      <p class="rm-desc">Type any character. Watch an AI turn it into a pixel-art runner. Play instantly.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/media-stack/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/media-stack.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Jun 10, 2026</span>
+      </div>
+      <h3 class="rm-title">Eyes, ears, and a voice: building Reachy Mini&#x27;s media stack</h3>
+      <p class="rm-authors">Fabien Danieau, Alina Lozovskaya, Caroline Pascal, Antoine Pirrone, Thibaud Frere</p>
+      <p class="rm-desc">How Reachy Mini streams audio and video: the camera, the microphone array, and the GStreamer and WebRTC stack that runs apps on the robot or anywhere.</p>
+    </div>
+  </a>
+  <div class="rm-mirrors">Also on: <a href="https://huggingface.co/blog/pollen-robotics/reachy-mini-media-stack" target="_blank" rel="noopener noreferrer">HF Community Blog ↗</a></div>
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/adding-mcp-tools/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/adding-mcp-tools.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Jun 3, 2026</span>
+      </div>
+      <h3 class="rm-title">Adding MCP Tools to Reachy Mini</h3>
+      <p class="rm-authors">Alina Lozovskaya</p>
+      <p class="rm-desc">The Reachy Mini conversation app can now call tools hosted in public Hugging Face Spaces over MCP: add web search or weather without editing any code.</p>
+    </div>
+  </a>
+  <div class="rm-mirrors">Also on: <a href="https://huggingface.co/blog/adding-mcp-tools-to-reachy-mini" target="_blank" rel="noopener noreferrer">HF Main Blog ↗</a></div>
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/local-reachy-mini-conversation" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://huggingface.co/blog/assets/local-reachy-mini-conversation/thumbnail.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-main">HF Main Blog</span>
+        <span class="rm-date">May 27, 2026</span>
+      </div>
+      <h3 class="rm-title">Reachy Mini goes fully local</h3>
+      <p class="rm-authors">Amir Mahla, Andres Marafioti</p>
+      <p class="rm-desc">After building your Reachy Mini, you&#x27;ll install the conversation app and start talking to it. Until now, you had to send your audio to a server. But not anymore. Today we&#x27;ll walk you through running the whol…</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/clem/reachymini-appstore" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://cdn-uploads.huggingface.co/production/uploads/5e67bdd61009063689407479/Q8YIsF3XQ694DgHHQxtrX.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-community">HF Community Blog</span>
+        <span class="rm-date">May 6, 2026</span>
+      </div>
+      <h3 class="rm-title">Introducing the agentic robotics appstore for 10,000 Reachy Minis</h3>
+      <p class="rm-authors">Clem 🤗</p>
+      <p class="rm-desc">Today we&#x27;re shipping an agentic toolkit for Reachy Mini, our open-source desktop robot. You describe the behavior you want in plain English, and an AI agent writes, tests, ships the code to the robot and iterates…</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/curtburk/reachy-voice-agent" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/curtburk/reachy-voice-agent.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-community">HF Community Blog</span>
+        <span class="rm-date">Apr 6, 2026</span>
+      </div>
+      <h3 class="rm-title">Building a Fully Local Voice AI Agent on a Reachy Mini Robot</h3>
+      <p class="rm-authors">Curtis Burkhalter</p>
+      <p class="rm-desc">Written by Curtis Burkhalter, Ph.D. (HP),
+Matt Allard, Alyss Noland, Allen Bourgoyne, David Messina (NVIDIA),
+Jeff Boudier (Hugging Face),
+Remi Fabre (Pollen Robotics)
+March 2026</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/haixuantao/use-dynamixel-wizard-with-reachy-mini-wireless" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/haixuantao/use-dynamixel-wizard-with-reachy-mini-wireless.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-community">HF Community Blog</span>
+        <span class="rm-date">Jan 8, 2026</span>
+      </div>
+      <h3 class="rm-title">How to use Dynamixel Wizard with Reachy Mini Wireless</h3>
+      <p class="rm-authors">haixuan tao</p>
+      <p class="rm-desc">If you ever need to reflash the pi you will need to remove those change with:</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/nvidia-reachy-mini" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://huggingface.co/blog/assets/nvidia-reachy-mini/new_thumbnail.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-main">HF Main Blog</span>
+        <span class="rm-date">Jan 5, 2026</span>
+      </div>
+      <h3 class="rm-title">NVIDIA brings agents to life with DGX Spark and Reachy Mini</h3>
+      <p class="rm-authors">Jeff Boudier, Nader Khalil, Alec Fong</p>
+      <p class="rm-desc">Today at CES 2026, NVIDIA unveiled a world of new open models to enable the future of agents, online and in the real world. From the recently released NVIDIA Nemotron reasoning LLMs to the new NVIDIA Isaac GR00T N1.6…</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/pollen-robotics/make-and-publish-your-reachy-mini-apps.png')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-community">HF Community Blog</span>
+        <span class="rm-date">Dec 3, 2025</span>
+      </div>
+      <h3 class="rm-title">Make and publish your Reachy Mini App</h3>
+      <p class="rm-authors">Remi Fabre, Antoine Pirrone, Rouanet</p>
+      <p class="rm-desc">Build, package, and publish an app that the entire Reachy Mini community can install in one click - share your creations, inspire others, and contribute to the ecosystem!</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://huggingface.co/blog/reachy-mini" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://huggingface.co/blog/assets/reachy-mini/thumbnail.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--hf-main">HF Main Blog</span>
+        <span class="rm-date">Jul 9, 2025</span>
+      </div>
+      <h3 class="rm-title">Reachy Mini - The Open-Source Robot for Today&#x27;s and Tomorrow&#x27;s AI Builders</h3>
+      <p class="rm-authors">Thomas Wolf, Matthieu Lapeyre</p>
+      <p class="rm-desc">Tiny price, small size, huge possibilities. Code, learn, share with AI builders of all ages, all around the globe.</p>
+    </div>
+  </a>
+  
+</article>
+
+<article class="rm-card">
+  <a class="rm-card-link" href="https://www.pollen-robotics.com/reachy-mini/blog/reachy-mini-announcement/" target="_blank" rel="noopener noreferrer">
+    <div class="rm-thumb" style="background-image:url('https://pollen-robotics.com/assets/blog/og/reachy-mini-announcement.jpg')"></div>
+    <div class="rm-card-body">
+      <div class="rm-card-meta">
+        <span class="rm-badge rm-badge--pollen">Pollen Robotics Website</span>
+        <span class="rm-date">Jul 9, 2025</span>
+      </div>
+      <h3 class="rm-title">Reachy Mini: the open-source robot for AI builders</h3>
+      <p class="rm-authors">Thomas Wolf, Matthieu Lapeyre, Pollen Robotics, Thibaud Frere</p>
+      <p class="rm-desc">Meet Reachy Mini, an expressive, open-source desktop robot for human-robot interaction, creative coding and AI experimentation. From $399.</p>
+    </div>
+  </a>
+  
+</article></section>
+<div class="rm-footer">Source: <a href="https://github.com/yaseminozkut/reachy-mini-blog-space" target="_blank" rel="noopener">github.com/yaseminozkut/reachy-mini-blog-space</a></div>
+</div>
+</body>
+</html>
